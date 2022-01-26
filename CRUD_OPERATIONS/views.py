@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import speech_recognition as sr
+import speech_recognition as sr 
 import pyttsx3
 import wolframalpha
 import wikipedia
@@ -13,7 +13,7 @@ def bot_search(request):
     query = request.GET.get('query')
 
     try:
-        client = wolframalpha.Client("5GVXWJ-J56GJA5XRU") # Paste Your API Key Here....!!!
+        client = wolframalpha.Client(" ") # Paste Your wolframalpha API Key Here....!!! Go to wolframalpha and Create your API key and paste it here.
         res = client.query(query)
         ans = next(res.results).text
         return render(request, 'pybot/index.html',{'ans':ans,'query':query})
