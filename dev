@@ -1,0 +1,4 @@
+Auto-merging Crud_Operation_in_DRF/urls.py
+CONFLICT (content): Merge conflict in Crud_Operation_in_DRF/urls.py
+CONFLICT (modify/delete): CRUD_OPERATIONS/views.py deleted in HEAD and modified in 025d08cf87c86531b15214baca5aa7ce0cb4360c. Version 025d08cf87c86531b15214baca5aa7ce0cb4360c of CRUD_OPERATIONS/views.py left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
