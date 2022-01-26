@@ -1,0 +1,40 @@
+{% extends "Employee_Register/base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'Style.css' %}">
+<table class="table" table-borderless>
+    <thead class="border-bottom" font-weight-bold>
+        <tr class="trtr">
+            <td style="font-weight: bold;  color: rgb(0, 0, 0);">Full Name</td>
+            <td style="font-weight: bold;  color: rgb(0, 0, 0);">Mobile</td>
+            <td style="font-weight: bold;  color: rgb(0, 0, 0);">Position</td>
+            <td>
+                <a href="{% url 'employee_insert'  %}" class="btn btn-outline-success" style="font-weight: bold;  color: rgb(0, 0, 0); background-color:rgb(34, 87, 34);">
+                    <i class=" fas fa-plus "></i> Add New
+                </a>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee in employee_list %}
+        <tr class="trtr">
+            <td>{{employee.fullname}}</td>
+            <td>{{employee.mobile}}</td>
+            <td>{{employee.position}}</td>
+            <td>
+                <a href="{% url 'employee_update' employee.id %} " class="btn text-secondary px-0 ">
+                    <i class="far fa-edit fa-lg "></i>
+                </a>
+                <form action="{% url 'employee_delete' employee.id %} " method="post " class="d-inline ">
+                    {% csrf_token %}
+                    <button class="submit btn ">
+                        <i class="far fa-trash-alt fa-lg text-danger float-right "></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock content %}
