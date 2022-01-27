@@ -20,6 +20,7 @@ Although Django provides you default Database of SQL , The database I've used he
 for Using Postgresql as your database -
    i. You have to download Postgresql and Create a profile and Password ,then
   ii. You have to make following changes into your Database settings(under settings.py) ->
+  ```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -31,7 +32,7 @@ DATABASES = {
 
     }
 }
-
+  ```
 --AAUSH RAJ
 aayushcontactinfo@gamil.com
 
