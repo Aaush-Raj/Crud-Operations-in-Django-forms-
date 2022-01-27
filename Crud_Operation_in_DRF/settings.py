@@ -71,8 +71,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'CRUD_OPERATIONS.wsgi.application'
-
+WSGI_APPLICATION = 'Crud_Operation_in_DRF.wsgi.application'
+#CRUD_OPERATIONS
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
